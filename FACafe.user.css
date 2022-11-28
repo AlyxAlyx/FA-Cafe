@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FA Café
 @namespace      github.com/AlyxAlyx/FA-Cafe
-@version        0.0.3
+@version        0.0.4
 @description    A new userstyle
 @author         AlyxAlyx
 @updateURL      https://github.com/AlyxAlyx/FA-Cafe/raw/main/FACafe.user.css
@@ -315,7 +315,7 @@
         border: 0;
     }
     
-    section.gallery p, section.gallery p a:link, section.gallery p a:visited, .submission-id-sub-container a, .comment_username, .comment_username h3, .user-submitted-links a, h2 a, .current, #donation_list h3, .watch-list-items a, .artist_name, .iconusername, .preview_user, .minigallery-more a, .info span, .auto_link a[href*="jid:"], .page-controls-journal-links a , .stats-page-submission-details h3, .user-folders a, .folder-list-container a {
+    section.gallery p, section.gallery p a:link, section.gallery p a:visited, .submission-id-sub-container a, .comment_username, .comment_username h3, .user-submitted-links a, h2 a, .current, #donation_list h3, .watch-list-items a, .artist_name, .iconusername, .preview_user, .minigallery-more a, .auto_link a[href*="jid:"], .page-controls-journal-links a , .stats-page-submission-details h3, .user-folders a, .folder-list-container a, .submission-id-sub-container a strong {
         color: var(--content-link) !important;
         border: 0;
         &:hover {
