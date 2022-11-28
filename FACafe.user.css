@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FA Café
 @namespace      github.com/AlyxAlyx/FA-Cafe
-@version        0.0.2
+@version        0.0.3
 @description    A new userstyle
 @author         AlyxAlyx
 @updateURL      https://github.com/AlyxAlyx/FA-Cafe/raw/main/FACafe.user.css
@@ -19,8 +19,8 @@
 }
 @var checkbox hidefaplus "Hide FA+ Icons" 0
 @var select  roundness "Avatar roundness" {
-	"Circle":"circle",
-	"Square":"square"
+    "Circle":"circle",
+    "Square":"square"
 }
 ==/UserStyle== */
 
@@ -100,6 +100,8 @@
                 --bg: #232e38;
                 --content-link:#bd7ba2;
                 --content-link-hover:#e493c3;
+                --base-link: #7bb1bd;
+                --base-link-hover: #a5eefe;
                 --base-text: #c3ccd4;
                 --base-text-hover: #d3ddd3;
             }
@@ -111,6 +113,8 @@
                 --bg: #4b3a50;
                 --content-link:#7bbda5;
                 --content-link-hover:#8dd9bd;
+                --base-link: #b485cd;
+                --base-link-hover: #e9a5fe;
                 --base-text: #d4c3cc;
                 --base-text-hover: #d3ddd3;
             }
@@ -122,6 +126,8 @@
                 --bg: #1e2124;
                 --content-link:#bd7b7b;
                 --content-link-hover:#e49393;
+                --base-link: #c39cc5;
+                --base-link-hover: #ffc9fe;
                 --base-text: #e1e1e1;
                 --base-text-hover: #e3e3e3;
             }
@@ -133,6 +139,8 @@
                 --bg: #2f382e;
                 --content-link:#dcdc8f;
                 --content-link-hover:#fafea5;
+                --base-link: #bdbd7b;
+                --base-link-hover: #fafea5;
                 --base-text: #c3d4c6;
                 --base-text-hover: #d3ddd3;
             }
@@ -144,6 +152,8 @@
                 --bg: #282828;
                 --content-link: #75a6b8;
                 --content-link-hover: #8ac3da;
+                --base-link: #f7e7df;
+                --base-link-hover: #fffaf8;
                 --base-text: #d6bbae;
                 --base-text-hover: #f0cfc0;
             }
@@ -205,6 +215,24 @@
         border: none;
     }
     
+    #page-commission-info {
+        .types-table tr.even td, .types-table tr.even th {
+            background-color: var(--bg-400);
+        }
+        .section-body {
+            border-radius: 0 0 8px 8px;
+        }
+        h2 {
+            color: var(--content-link);
+        }
+        h4 {
+            color: var(--content-link) !important;
+        }
+        img {
+            border-radius: 15px;
+        }
+    }
+    
     #description_popup {
         background-color: var(--bg-300);
         border: 0;
@@ -229,7 +257,7 @@
     
     
     @media screen and (min-width: 700px) {
-        comment-container .avatar a img, userpage-nav-header userpage-nav-avatar img {
+        comment-container .avatar a img, userpage-nav-header userpage-nav-avatar img, .shoutbox-avatar  img{
             border-radius: var(--avatar-border-radius);
             width: 100px !important;
             height: 100px !important;
@@ -239,7 +267,7 @@
             box-shadow: none;
         }
 
-        .avatar a {
+        comment-container .avatar a {
             border: 4px solid var(--content-link);
             border-radius: var(--avatar-border-radius);
             max-height: 100% !important;
