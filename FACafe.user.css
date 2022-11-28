@@ -1,0 +1,353 @@
+/* ==UserStyle==
+@name           FA Café
+@namespace      github.com/AlyxAlyx/FA-Cafe
+@version        0.0.1
+@description    A new userstyle
+@author         AlyxAlyx
+@preprocessor stylus
+@var          select   themep    "Theme Pack" {
+    "Muted": "muted",
+    "Classic": "classic"
+}
+@var select  theme "Theme" {
+    "Hexagon":"hexagon",
+    "Pony":"pony",
+    "Bloodlust":"bloodlust",
+    "Serpent":"serpent",
+    "Hotdog":"hotdog"
+}
+@var checkbox hidefaplus "Hide FA+ Icons" 0
+@var select  roundness "Avatar roundness" {
+	"Circle":"circle",
+	"Square":"square"
+}
+==/UserStyle== */
+
+@-moz-document domain("furaffinity.net") {
+    if themep == classic {
+        if theme == hexagon {
+            :root {
+                --bg-300: #152f56;
+                --bg-400: #0e203c;
+                --bg: #031530;
+                --content-link: #fdbe2f;
+                --content-link-hover:#ffd575;
+                --base-link: #b4c7d9;
+                --base-link-hover: #e9f2fa;
+                --base-text: #fff;
+                --base-text-hover: #fff;
+            }
+        }
+        else if theme == pony {
+            :root {
+                --bg-300: #2f175c;
+                --bg-400: #250d51;
+                --bg: #190836;
+                --content-link: #ff5eff;
+                --content-link-hover: #ff8dff;
+                --base-link: #b4c7d9;
+                --base-link-hover: #e9f2fa;
+                --base-text: #fff;
+                --base-text-hover: #fff;
+            }
+        }
+        else if theme == bloodlust {
+            :root {
+                --bg-300: #333;
+                --bg-400: #222;
+                --bg: #111;
+                --content-link: #ffee95;
+                --content-link-hover:#f68b00;
+                --base-link: #ffee95;
+                --base-link-hover: #f68b00;
+                --base-text: #fff;
+                --base-text-hover: #fff;
+            }
+        }
+        else if theme == serpent {
+            :root {
+                --bg: #f6eb86;
+                --bg-400: #dacf6b;
+                --bg-300: #44a544;
+                --content-link:#504afc;
+                --content-link-hover:#847fff;
+                --base-link: #000;
+                --base-link-hover: #222;
+                --base-text: #000;
+                --base-text-hover: #000;
+            }
+        }
+        else if theme == hotdog {
+            :root {
+                --bg: #f00;
+                --bg-400: #ffff2b;
+                --bg-300: #ff0;
+                --content-link:#504afc;
+                --content-link-hover:#847fff;
+                --base-link: #000;
+                --base-link-hover: #222;
+                --base-text: #000;
+                --base-text-hover: #000;
+            }
+        }
+    }
+    else if themep == muted {
+        if theme == hexagon {
+            :root {
+                --bg-300: #364758;
+                --bg-400: #2c3946;
+                --bg: #232e38;
+                --content-link:#bd7ba2;
+                --content-link-hover:#e493c3;
+                --base-text: #c3ccd4;
+                --base-text-hover: #d3ddd3;
+            }
+        }
+        else if theme == pony {
+            :root {
+                --bg-300: #604a67;
+                --bg-400: #55425a;
+                --bg: #4b3a50;
+                --content-link:#7bbda5;
+                --content-link-hover:#8dd9bd;
+                --base-text: #d4c3cc;
+                --base-text-hover: #d3ddd3;
+            }
+        }
+        else if theme == bloodlust {
+            :root {
+                --bg-300: #36393e;
+                --bg-400: #282b30;
+                --bg: #1e2124;
+                --content-link:#bd7b7b;
+                --content-link-hover:#e49393;
+                --base-text: #e1e1e1;
+                --base-text-hover: #e3e3e3;
+            }
+        }
+        else if theme == serpent {
+            :root {
+                --bg-300: #3e5341;
+                --bg-400: #354535;
+                --bg: #2f382e;
+                --content-link:#dcdc8f;
+                --content-link-hover:#fafea5;
+                --base-text: #c3d4c6;
+                --base-text-hover: #d3ddd3;
+            }
+        }
+        else if theme == hotdog {
+            :root {
+                --bg-300: #3c3836;
+                --bg-400: #323232;
+                --bg: #282828;
+                --content-link: #75a6b8;
+                --content-link-hover: #8ac3da;
+                --base-text: #d6bbae;
+                --base-text-hover: #f0cfc0;
+            }
+        }
+    }
+    
+    if hidefaplus {
+        img[src="/themes/beta/img/the-golden-pawb.png"] {
+            display: none;
+        }
+    }
+    
+    if roundness == circle {
+        :root {
+            --avatar-border-radius: 50%;
+        }
+    }
+    else {
+        :root {
+            --avatar-border-radius: 9%;
+        }
+    }
+    
+    hr {
+        border-image-source: linear-gradient(to right,transparent,var(--content-link),transparent)
+    }
+    
+    html, body {
+        box-shadow: none;
+        background: var(--bg-300);
+    }
+    
+    html, body, .uploadfield, .alt2 a:link, .alt2 a:visited, .tab u, a:link, a:visited, a:hover, .global-dropdown-formatting, h2, .font-small {
+        color: var(--base-text);
+    }
+    
+    h3, h4 {
+        color: var(--base-text) !important;
+    }
+    
+    .policy-body h2, #sidebar-options h4 {
+        color: var(--content-link) !important;
+    }
+    
+    section .section-header {
+        background-color: var(--bg);
+        border-radius: 8px 8px 0 0;
+        padding-right: 1em;
+    }
+    
+    section .section-footer {
+        background-color: var(--bg);
+        border-radius: 0 0 8px 8px;
+        padding: 0.5em 1em 0.25em 1em;
+    }
+    
+    section .section-body, .journal-body-theme {
+        background-color: var(--bg-400)!important;
+        border: none;
+    }
+    
+    #description_popup {
+        background-color: var(--bg-300);
+        border: 0;
+    }
+    
+    .section-submission, .submission-preview, .userpage-info-container, .user-profile-main {
+        background-color: var(--bg-400);
+        padding-top: 0.5em;
+    }
+    
+    .comment_container .header, .comment_container .body,  {
+        background-color: var(--bg) !important;
+    }
+    
+    .comment_container .header:after {
+        border-color: transparent var(--bg);
+    }
+    
+    #donation_list .comment_container {
+        margin-top: 0.2em;
+    }
+    
+    
+    @media screen and (min-width: 700px) {
+        comment-container .avatar a img, userpage-nav-header userpage-nav-avatar img {
+            border-radius: var(--avatar-border-radius);
+            width: 100px !important;
+            height: 100px !important;
+            max-height: 100px !important;
+            object-fit: cover;
+            border: 0;
+            box-shadow: none;
+        }
+
+        .avatar a {
+            border: 4px solid var(--content-link);
+            border-radius: var(--avatar-border-radius);
+            max-height: 100% !important;
+            max-width: 100% !important;
+            height: 100px !important;
+            width: 100px !important;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        comment-container .avatar a img, userpage-nav-header userpage-nav-avatar img {
+            border-radius: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+    }
+    
+    comment-container {
+        background-color: var(--bg-400);
+        margin-bottom: 0.5em;
+        border: 0;
+        border-radius: 8px;
+    }
+    
+    .mobile-nav, .user-profile-options, .browse-sidebar-container, .fa-plus-subscribe-box, .fa-plus-benefit-item {
+        background-color: var(--bg-400);
+        border-radius: 8px;
+        height: 100%;
+        margin-top: 1em;
+    }
+    
+    #columnpage .submission-sidebar, #columnpage .sidebar {
+        background-color: var(--bg-400);
+        border-radius: 8px;
+        height: 100%;
+        margin-top: 1em;
+    }
+    
+    #page-userpage .userpage-profile, #page-userpage .userpage-section-right, #page-userpage .userpage-section-left {
+        border: 0;
+        border-radius: 8px;
+    }
+    
+    section, .stats-page, .submission-preview, .fa-plus-benefit-item, .fa-plus-subscribe-box {
+        border: 0;
+    }
+    
+    section.gallery p, section.gallery p a:link, section.gallery p a:visited, .submission-id-sub-container a, .comment_username, .comment_username h3, .user-submitted-links a, h2 a, .current, #donation_list h3, .watch-list-items a, .artist_name, .iconusername, .preview_user, .minigallery-more a, .info span, .auto_link a[href*="jid:"], .page-controls-journal-links a , .stats-page-submission-details h3, .user-folders a, .folder-list-container a {
+        color: var(--content-link) !important;
+        border: 0;
+        &:hover {
+            color: var(--content-link-hover) !important;
+        }
+    }
+    
+    .section-header a {
+        color: var(--base-text) !important;
+        &:hover {
+            color: var(--base-text-hover) !important;
+        }
+    }
+    
+    .highlight, .highlight a {
+        color: var(--content-link) !important;
+    }
+    
+    button, .button, .return-links a, #pageid-submission .submission-sidebar .buttons div {
+        background: var(--bg);
+        border: 0;
+        &:hover {
+            background: darken(#420, 20%);
+        }
+    }
+    
+    #pageid-submission .submission-sidebar .buttons div {
+        margin: 0px 5px 0px 0px;
+    }
+    
+    .tags a {
+        background: none;
+        padding: 4px 4px;
+        color: var(--base-link) !important;
+        &:hover {
+            background: none;
+            color: var(--base-link-hover) !important;
+        }
+    }
+    
+    #controlpanelnav a, .auto_link.footer-links a {
+        color: var(--base-link) !important;
+        &:hover {
+            color: var(--base-link-hover) !important;
+        }
+    }
+    
+    #controlpanelnav h3 {
+        color: var(--content-link) !important;
+    }
+    
+    .stats-page-submission-stats {
+        background: var(--bg);
+    }
+    
+    select option, optgroup {
+        background: var(--bg) !important;
+    }
+    
+    #footer {
+        background-color: var(--bg)!important;
+    }
+
+}
