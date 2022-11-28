@@ -1,9 +1,10 @@
 /* ==UserStyle==
 @name           FA Café
 @namespace      github.com/AlyxAlyx/FA-Cafe
-@version        0.0.1
+@version        0.0.2
 @description    A new userstyle
 @author         AlyxAlyx
+@updateURL      https://github.com/AlyxAlyx/FA-Cafe/raw/main/FACafe.user.css
 @preprocessor stylus
 @var          select   themep    "Theme Pack" {
     "Muted": "muted",
